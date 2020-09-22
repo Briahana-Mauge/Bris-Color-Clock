@@ -7,7 +7,7 @@ class Clock extends React.Component {
         this.state = ({
             time: new Date().toLocaleTimeString(),
             backgroundColor: '',
-            fontColor:''
+            fontColor: ''
         })
 
     }
@@ -20,17 +20,16 @@ class Clock extends React.Component {
         clearInterval(this.intervalID)
     }
 
-   
+
     updateClock() {
 
         let time = new Date()
-        console.log(time)
         let hour = time.getHours()
         let minute = time.getMinutes()
         let second = time.getSeconds()
         let backgroundStr = '';
-        let fontStr = `${hour}${minute}9${second}`
-console.log(fontStr)
+        let fontStr = `${hour}${minute}${second}`
+        console.log(fontStr)
 
         if (hour < 10) {
             backgroundStr += `0${hour}`
@@ -53,17 +52,17 @@ console.log(fontStr)
         this.setState({
             time: new Date().toLocaleTimeString(),
             backgroundColor: backgroundStr,
-            fontColor:fontStr
+            fontColor: fontStr
         })
     }
     render() {
         const { time, backgroundColor/*,fontColor*/ } = this.state
-        return (
+        return (<div>
             <div className='clock' style={{ backgroundColor: `#${backgroundColor}` }}>
                 <div className='time'>
                     <p /*style={{ color: `#${fontColor}` }}*/>{time}</p>
                 </div>
-            </div>
+            </div></div>
         )
     }
 }
