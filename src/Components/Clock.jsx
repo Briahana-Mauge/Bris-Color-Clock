@@ -56,13 +56,16 @@ class Clock extends React.Component {
         })
     }
     render() {
-        const { time, backgroundColor/*,fontColor*/ } = this.state
-        return (<div>
-            <div className='clock' style={{ backgroundColor: `#${backgroundColor}` }}>
-                <div className='time'>
-                    <p /*style={{ color: `#${fontColor}` }}*/>{time}</p>
+        const { time, backgroundColor,fontColor } = this.state
+        return (
+            <div>
+                <div className='clock' style={{ backgroundColor: `#${backgroundColor}` }}>
+                    <p className = 'description'>Visualize time as color with <strong><em>Bri's Color Clock</em></strong>!</p>
+                    <div className='time'>
+                        <p /*style={{ color: `#${fontColor}` }}*/>{time}</p>
+                    </div>
                 </div>
-            </div></div>
+            </div>
         )
     }
 }

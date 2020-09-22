@@ -1,22 +1,22 @@
 .time{
-    /* height: 500px; */
-    /* width: 800px; */
-    /* margin:auto auto; */
     position: fixed;
     top:25%;
     bottom:25%;
-    /* top:90%; */
     left:20%;
     right:20%;
-    /* padding-top: 25%; */
-    /* margin-bottom: auto; */
-    /* align-items: center; */
-    /* padding-top: 70px; */
     font-family: 'Courier New', Courier, monospace;
     color: white;
     font-size: 5rem;
 }
-
+.description{
+    margin-top: 0;
+    margin-left:20%;
+    margin-right:20%;
+    padding-top: 30px;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+}
 @media only screen and (max-width: 1000px){
     .time{
         font-size: 4rem;
