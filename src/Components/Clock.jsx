@@ -29,7 +29,7 @@ class Clock extends React.Component {
         let second = time.getSeconds()
         let backgroundStr = '';
         let fontStr = `${hour}${minute}${second}`
-        console.log(fontStr)
+        // console.log(fontStr)
 
         if (hour < 10) {
             backgroundStr += `0${hour}`
